@@ -1,0 +1,31 @@
+<header class="main-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-12">
+          <h1 class="logo" [routerLink]="['']">LOGO</h1>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="nav-panel">
+          <nav>
+            <ul class="nav-panel__menu">
+              <li>
+                <span class="nav-panel__menu--link" [routerLink]="['']" routerLinkActive="active">Home</span>
+              </li>
+              <li>
+                <span class="nav-panel__menu--link" [routerLink]="['about']" routerLinkActive="active">About</span>
+              </li>
+              <li>
+                <span class="nav-panel__menu--link" [routerLink]="['contact']" routerLinkActive="active">Contact</span>
+              </li>
+            </ul>
+          </nav>
+          <div class="nav-panel__search">
+            <div class="nav-panel__search--button">
+              <mat-icon>search</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

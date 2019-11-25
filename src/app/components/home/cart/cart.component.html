@@ -1,0 +1,17 @@
+<div class="cart">
+  <p class="cart__title">
+    <img class="cart__title--icon" src="../../assets/images/phone-book.png" alt="Contact">
+    <span class="cart__title--text">Contact</span>
+  </p>
+  <p class="cart__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam purus est, placerat sed ante vel, ultrices congue augue.
+  </p>
+  <p class="cart__title">
+    <img class="cart__title--icon" src="../../assets/images/shopping-cart.png" alt="Cart">
+    <span class="cart__title--text">Cart</span>
+  </p>
+  <div class="cart__content">
+    <div class="cart__item" *ngFor="let item of items"><mat-icon class="cart__item--remove" (click)="removeItem(item)">close</mat-icon><span class="cart__item--title">{{item.title}}</span></div>
+    <div *ngIf="items.length === 0" class="cart__empty">Cart is empty</div>
+  </div>
+</div>

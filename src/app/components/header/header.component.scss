@@ -1,0 +1,44 @@
+@import 'variables';
+
+.main-header {
+  border-bottom: 1px solid $gray;
+  margin-bottom: 71px;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .nav-panel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__menu {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &--link {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: $bold-weight;
+        margin: 0 23px;
+        cursor: pointer;
+
+        &.active {
+          color: $light-blue;
+        }
+      }
+    }
+
+    &__search {
+      background-color: $search;
+      padding: 37px;
+      color: $dark-text;
+      cursor: pointer;
+    }
+  }
+}

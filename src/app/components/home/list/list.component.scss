@@ -1,0 +1,43 @@
+@import 'variables';
+@import 'breakpoints';
+
+.songs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include md-and-down {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  .song {
+    width: 216px;
+    box-shadow: 0 10px 15px rgba($black, 0.02);
+    margin-bottom: 40px;
+    cursor: pointer;
+
+    &__cover {
+      height: 216px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__content {
+      background-color: $white;
+      padding: 13px;
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: $bold-weight;
+      margin-bottom: 13px;
+    }
+
+    &__artist {
+      font-size: 12px;
+      color: $light-text
+    }
+  }
+}
+

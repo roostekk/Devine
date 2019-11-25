@@ -1,0 +1,16 @@
+<div class="songs" *ngIf="playlist; else loading">
+  <div class="song" [routerLink]="['song/' + song.id]" *ngFor="let song of playlist.tracks.data">
+    <img class="song__cover" src="{{song.album.cover_medium}}" alt="{{song.title}}">
+    <div class="song__content">
+      <p class="song__title">
+        {{song.title}}
+      </p>
+      <p class="song__artist">
+        {{song.artist.name}}
+      </p>
+    </div>
+  </div>
+</div>
+<ng-template #loading>
+  <div class="loader"></div>
+</ng-template>

@@ -1,0 +1,61 @@
+@import 'variables';
+@import 'breakpoints';
+
+.song-details {
+  margin-bottom: 78px;
+
+  &__cover {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+
+    @include sm-and-down {
+      margin-top: 24px;
+    }
+  }
+
+  &__title {
+    background-color: $light-blue;
+    padding: 34px 52px 15px 52px;
+    color: $white;
+    font-size: 18px;
+    font-weight: $bold-weight
+  }
+
+  &__content {
+    background-color: $light-blue;
+    padding: 0 52px 34px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include sm-and-down {
+      flex-wrap: wrap;
+      padding-top: 10px;
+      margin-top: -1px
+    }
+  }
+
+  &__artist {
+    font-family: $second-font;
+    font-size: 13px;
+    color: rgba($white, 0.79);
+    line-height: 16px;
+    text-align: justify;
+    max-width: 512px;
+    margin-right: 20px;
+  }
+
+  .add-btn {
+    padding: 12px 29px;
+    color: $white;
+    font-size: 18px;
+    font-weight: $bold-weight;
+    background-color: $accent;
+    border: 0;
+
+    &:disabled {
+      background-color: rgba($accent, .4);
+    }
+  }
+}

@@ -1,0 +1,73 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 767px,
+  lg: 960px,
+  xl: 1199px,
+  xxl: 1440px
+);
+
+
+// Smartphones
+@mixin sm-and-down {
+  @media (max-width: map-get($grid-breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+@mixin sm-and-up {
+  @media (min-width: map-get($grid-breakpoints, 'sm')) {
+    @content;
+  }
+}
+
+// Tablets portrait
+@mixin md-and-down {
+  @media (max-width:  map-get($grid-breakpoints, 'md')) {
+    @content;
+  }
+}
+
+@mixin md-and-up {
+  @media (min-width: map-get($grid-breakpoints, 'md')) {
+    @content;
+  }
+}
+
+// Tablets landscape
+@mixin lg-and-down {
+  @media (max-width:  map-get($grid-breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+@mixin lg-and-up {
+  @media (min-width: map-get($grid-breakpoints, 'lg')) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin xl-and-down {
+  @media (max-width:  map-get($grid-breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin xl-and-up {
+  @media (min-width: map-get($grid-breakpoints, 'xl')) {
+    @content;
+  }
+}
+
+@mixin xxl-and-down {
+  @media (max-width:  map-get($grid-breakpoints, 'xxl')) {
+    @content;
+  }
+}
+
+@mixin xxl-and-up {
+  @media (min-width:  map-get($grid-breakpoints, 'xxl')) {
+    @content;
+  }
+}

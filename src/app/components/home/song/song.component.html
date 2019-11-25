@@ -1,0 +1,23 @@
+<section class="song">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="song-details" *ngIf="song; else loading">
+          <img src="{{song.album.cover_xl}}" alt="{{song.title}}" class="song-details__cover">
+          <div class="song-details__title">
+            {{song.title}}
+          </div>
+          <div class="song-details__content">
+            <p class="song-details__artist">
+              {{song.artist.name}}
+            </p>
+            <button class="add-btn" [disabled]="isDisabled" (click)="addToCart()">Add to cart</button>
+          </div>
+        </div>
+        <ng-template #loading>
+          <div class="loader"></div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
